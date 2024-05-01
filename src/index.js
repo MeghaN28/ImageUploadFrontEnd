@@ -1,13 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+import UploadImageToS3WithNativeSdk from './UploadImageToS3WithNativeSdk';
 import reportWebVitals from './reportWebVitals';
+import CustomWebcam from './Webcam/CustomWebcam';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+ <UploadImageToS3WithNativeSdk/>
   </React.StrictMode>
 );
 

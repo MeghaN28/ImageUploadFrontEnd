@@ -1,6 +1,6 @@
-This Repository uses the Amazon SDK to connect to S3 Bucket
+This Repository uses the API Gatway to connect to S3 Bucket
 
-Make sure you have Node(NPM) and React installed
+Make sure you have Node(NPM) and React installed (check google to install node/react)
 
 After cloning the repo run "npm i" or "npm install"
 

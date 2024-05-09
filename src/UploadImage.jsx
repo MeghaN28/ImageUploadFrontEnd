@@ -55,7 +55,7 @@ function UploadImage() {
             <div className="flex justify-center pt-24">
                 <div className="outline-dashed outline-2 bg-indigo-100">
                     <div className="font-semibold text-base rounded flex flex-col items-center justify-center cursor-pointer border-dotted font-[sans-serif]">
-                        <form onSubmit={onSubmit}>
+                        <form onSubmit={onSubmit} className="flex flex-col items-center justify-center">
                             <div className="opacity-35">
                                 <img src={imageUpload} alt="" className="mx-auto px-4" />
                             </div>

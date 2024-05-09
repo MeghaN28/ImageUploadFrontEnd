@@ -2,7 +2,7 @@ import axios from "axios";
 
 export const uploadImage = async (imageBase64) => {
   try {
-    const apiUrl = `https://eu6t6jczc1.execute-api.us-east-1.amazonaws.com/UploadImage/UploadImageToS3`;
+    const apiUrl = `apiUrl`;
     
     // Ensure the image data is properly formatted in the request body
     const requestData = {

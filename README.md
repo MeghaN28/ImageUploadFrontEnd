@@ -6,3 +6,5 @@ After cloning the repo run "npm i" or "npm install"
 
 Then "npm start" to start the project
 
+Replace apiUrl with the original url
+

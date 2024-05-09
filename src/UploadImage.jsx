@@ -11,6 +11,7 @@ function UploadImage() {
     event.preventDefault(); // Prevent default form submission
 
     if (!imageFile) {
+      alert("Please select image")
       console.error("Please select an image file to upload.");
       return; // Early exit if no image is selected
     }
@@ -28,15 +29,18 @@ function UploadImage() {
 
         // Call the uploadImage function with base64 data
         const response = await uploadImage(base64Data);
+        alert("Image upload Successful")
         console.log("Image upload successful:", response);
 
         // Add any additional handling for successful upload (optional)
       };
 
       reader.onerror = (error) => {
+        alert("Error while uploading Image")
         console.error("Error reading image file:", error);
       };
     } catch (error) {
+      alert("Error while uploading Image")
       console.error("Error during image upload:", error);
     }
   };
@@ -45,6 +49,7 @@ function UploadImage() {
     const selectedFile = event.target.files[0];
     // Basic file type validation (optional)
     if (!selectedFile.type.match("image/")) {
+      alert("Please select valid image")
       console.error("Please select a valid image file (PNG, JPG, JPEG).");
       return;
     }

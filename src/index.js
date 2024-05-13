@@ -14,6 +14,7 @@ root.render(
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route path="upload" element={<UploadImage />} />
+          <Route index element={<UploadImage />} />
           <Route path="webcamera" element={<CustomWebcam />} />
         </Route>
       </Routes>

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { uploadImage } from "./services/UploadImageService";
-import imageUpload from "./assetImport/image_upload.jpg";
+import { uploadImage } from "../../services/UploadImageService";
+import imageUpload from "../../assetImport/image_upload.jpg";
 
 function UploadImage() {
     const [image, setImage] = useState(null);
@@ -36,7 +36,7 @@ function UploadImage() {
       };
 
       reader.onerror = (error) => {
-        alert("Error while uploading Image")
+        alert("Error while uploa ding Image")
         console.error("Error reading image file:", error);
       };
     } catch (error) {

@@ -1,14 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import UploadImage from './UploadImage';
+import Layout from "./pages/index";
+import UploadImage from './pages/UploadImagetoS3/UploadImage';
 import reportWebVitals from './reportWebVitals';
-import CustomWebcam from './Webcam/CustomWebcam';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import CustomWebcam from "./pages/UploadImagefromWebCam/CustomWebcam"
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-   <UploadImage/>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route path="upload" element={<UploadImage />} />
+          <Route path="webcamera" element={<CustomWebcam />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>
 );
 

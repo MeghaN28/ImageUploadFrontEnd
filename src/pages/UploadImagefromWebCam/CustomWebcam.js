@@ -76,37 +76,33 @@ const CustomWebcam = () => {
   }, [captureClicked, capture]);
 
   return (
-    <div className="bg-stone-200 min-h-screen">
-      <div className="flex justify-center pt-24">
-        <div className="outline-dashed outline-2 bg-indigo-100">
-          <div className="font-semibold text-base rounded flex flex-col items-center justify-center cursor-pointer border-dotted font-[sans-serif]">
+    <div className="bg-stone-200 min-h-screen flex flex-col items-center justify-center">
+      <div className="outline-dashed outline-2 bg-indigo-100 p-4 max-w-full overflow-auto">
+        <div className="font-semibold text-base rounded flex flex-col items-center justify-center cursor-pointer border-dotted font-[sans-serif]">
+          {name}
+          <div className="mb-4">
             {imgSrc ? (
               <img src={imgSrc} alt="webcam" />
             ) : (
               <Webcam height={600} width={600} ref={webcamRef} />
             )}
-            {name}
-            <div className="btn-container flex flex-row">
-              <div>
-                <button
-                  onClick={() => {
-                    setCaptureClicked(true);
-                    capture();
-                  }}
-                  className="gap-2 px-1 py-px border-2 border-white rounded-lg cursor-pointer bg-green-800 w-20"
-                >
-                  Capture photo
-                </button>
-              </div>
-              <div>
-                <button
-                  onClick={onSubmit}
-                  className="gap-2 px-1 py-px border-2 border-white rounded-lg cursor-pointer bg-green-800 w-20"
-                >
-                  Send Photo
-                </button>
-              </div>
-            </div>
+          </div>
+          <div className="btn-container flex flex-row">
+            <button
+              onClick={() => {
+                setCaptureClicked(true);
+                capture();
+              }}
+              className="gap-2 px-4 py-2 border-2 border-white rounded-lg cursor-pointer bg-green-800 text-white mx-2"
+            >
+              Capture photo
+            </button>
+            <button
+              onClick={onSubmit}
+              className="gap-2 px-4 py-2 border-2 border-white rounded-lg cursor-pointer bg-green-800 text-white mx-2"
+            >
+              Send Photo
+            </button>
           </div>
         </div>
       </div>

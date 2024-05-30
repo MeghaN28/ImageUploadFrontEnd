@@ -88,13 +88,13 @@ function UploadImage() {
                         ctx.beginPath();
                         ctx.rect(left, top, width, height);
                         ctx.lineWidth = 1;
-                        ctx.strokeStyle = "red";
+                        ctx.strokeStyle = "yellow";
                         ctx.stroke();
     
                         // Draw label text above or below the bounding box
                         const labelText = `${label.Name} (${label.Confidence.toFixed(2)}%)`;
                         ctx.font = "12px Arial";
-                        ctx.fillStyle = "red";
+                        ctx.fillStyle = "yellow";
     
                         let textX = left;
                         let textY = top - 5;
